@@ -1,49 +1,71 @@
-# TCGA Whole Slide Image (WSI) Classification
+# 🧬 TCGA Whole Slide Image (WSI) Classification
 
-This project is part of the course **DSAA 5037 - Advanced Topics in Artificial Intelligence** at **HKUST (Guangzhou)**.  
-We explore deep learning techniques for classifying Whole Slide Images (WSIs) from The Cancer Genome Atlas (TCGA).
+This project was conducted as part of the course **DSAA 5037** at **HKUST (Guangzhou)**.  
+We explore deep learning and graph-based techniques for classifying Whole Slide Images (WSIs) from The Cancer Genome Atlas (TCGA), with a focus on cancer **subtype** and **tumor site** classification.
 
-## 📌 Project Overview
+## 📌 Overview
 
-The goal of this project is to develop and evaluate models for the classification of histopathological WSIs.  
-We use TCGA datasets and focus on identifying cancer subtypes or tumor sites using computational pathology approaches.
+Whole Slide Images (WSIs) are gigapixel-scale histopathology slides capturing rich spatial and morphological details. However, their ultra-high resolution, sparse labels, and heterogeneity make automated analysis a major challenge.  
+This project investigates weakly supervised learning approaches and graph-based models for WSI classification. Specifically, we evaluate the performance of Attention-based MIL (ABMIL), Graph Convolutional Networks (GCN), and a proposed graph walk-based pooling method.
 
 ## 🧪 Methods
 
-We apply a pipeline that includes:
+The end-to-end pipeline includes:
 
-- **Patch extraction** from WSIs
-- **Feature encoding** using pre-trained CNNs or vision transformers
-- **Graph-based modeling** (e.g., GCN, GAT) to capture spatial and contextual relationships
-- **Classification** of WSIs based on aggregated patch-level or node-level information
+- 🔹 **Patch Extraction**: Tiling WSIs into manageable patches.
+- 🔹 **Feature Encoding**: Using pretrained CNNs (e.g., ResNet) or vision transformers (e.g., ViT, DINO, UNI) to extract patch embeddings.
+- 🔹 **Graph Construction**: Modeling spatial relationships between patches using k-NN or positional adjacency.
+- 🔹 **WSI Classification**: Aggregating patch features via:
+  - Attention-based Multiple Instance Learning (ABMIL)
+  - Graph Convolutional Networks (GCN)
+  - Graph Walk-based Weighted Pooling (proposed)
+
+> All models operate under weak supervision, using only slide-level labels.
 
 ## 🗂️ Dataset
 
-- **Source**: TCGA (The Cancer Genome Atlas)
-- **Content**: Whole Slide Images (WSIs) for various cancer types
-- **Labels**: Tumor site or subtype
-- **Preprocessing**: Tiling, filtering, stain normalization (if applied)
-
-> Note: Due to the size of WSIs, we recommend preprocessing and feature extraction before training.
+- **Source**: [TCGA - The Cancer Genome Atlas](https://portal.gdc.cancer.gov/)
+- **Data Type**: Whole Slide Images (WSIs) from various cancer cohorts
+- **Tasks**:
+  - **Subtype classification** (e.g., BRCA-Basal vs. Luminal A/B)
+  - **Site classification** (e.g., distinguishing organ sites)
+- **Preprocessing**:
+  - Tissue detection and tiling
+  - Optional stain normalization
+  - Feature extraction using frozen encoders
 
 ## 📊 Results
 
-Performance is evaluated using standard classification metrics:
+We evaluate each model using standard classification metrics:
 
-- Accuracy
-- F1-score
-- ROC-AUC (optional)
-- Confusion Matrix
+- ✅ Accuracy  
 
-We report performance across different model variants and ablation studies.
+> Comparative results are reported across four backbones:  
+> `ResNet`, `ViT`, `DINO`, and `UNI`.  
+> See:  
+> `Table~\ref{exp:exp_subtype_resnet}`  
+> `Table~\ref{exp:exp_subtype_vit}`  
+> `Table~\ref{exp:exp_subtype_dino}`  
+> `Table~\ref{exp:exp_subtype_uni}`
+
+Key Findings:
+- ABMIL achieves strong and consistent performance across most cancer subtypes.
+- GCN performs competitively in certain scenarios and outperforms ABMIL under specific encoders.
+- The graph walk-based method did not consistently improve results, suggesting room for further optimization.
+
+## 🔮 Future Directions
+
+- 🔍 **Smarter Patch Selection**: Incorporate attention or self-supervision to focus on diagnostically relevant tissue regions.
+- 🧠 **Dynamic Graph Construction**: Move beyond grid-based tessellation to learn more adaptive and semantically meaningful graph topologies.
+- 🧪 **Better Integration of Context**: Explore hierarchical models, spatial transformers, or hybrid attention-graph frameworks.
 
 ## 📁 Project Structure
 
 ```bash
 .
-├── data/               # Processed WSI tiles or graph representations
-├── models/             # Model definitions (e.g., GCN, GAT)
-├── utils/              # Helper functions (e.g., graph building, evaluation)
-├── train.py            # Main training script
-├── config.yaml         # Training configuration
+├── data/               # Preprocessed tiles, patch features, or graph representations
+├── models/             # Model implementations: ABMIL, GCN, etc.
+├── utils/              # Data loaders, graph builders, evaluation metrics
+├── train.py            # Main training and evaluation script
+├── config.yaml         # YAML config file for hyperparameters and model selection
 └── README.md           # This file
