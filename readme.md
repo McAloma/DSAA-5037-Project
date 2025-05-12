@@ -63,9 +63,29 @@ Key Findings:
 
 ```bash
 .
-├── data/               # Preprocessed tiles, patch features, or graph representations
-├── models/             # Model implementations: ABMIL, GCN, etc.
-├── utils/              # Data loaders, graph builders, evaluation metrics
-├── train.py            # Main training and evaluation script
-├── config.yaml         # YAML config file for hyperparameters and model selection
-└── README.md           # This file
+├── baselines/                  # Baseline models
+│   ├── mil/                   # Attention-based MIL models
+│   └── pretrain_encoder/      # Pretrained feature extractor modules
+│
+├── ckpts/                     # Saved model checkpoints
+│
+├── data/                      # Data preprocessing scripts
+│   └── encode_wsi.py         # Script for patch-level feature extraction from WSIs
+│
+├── draw/                      # Visualizations and plots
+│   └── walk_result.png       # Result plot of graph walk-based method
+│
+├── experiments/               # Training and evaluation scripts
+│   ├── classes_index.py      # Defines class indices and label mappings
+│   ├── classification_GW.py  # Graph Walk-based classification pipeline
+│   ├── classification_abmil.py # ABMIL-based classification pipeline
+│   ├── classification_basic.py # Baseline classification script (e.g., avg pooling)
+│   ├── classification_gcn.py # GCN-based classification pipeline
+│   ├── process_results.py    # Script for analyzing and aggregating results
+│   └── results/              # Folder for saving evaluation outputs
+│
+├── src/                       # Core model and utility implementations
+│   ├── models/               # Model architectures (e.g., GCN, pooling layers)
+│   └── tools/                # Helper functions, graph construction, etc.
+│
+└── readme.md                  # Project documentation (this file)
