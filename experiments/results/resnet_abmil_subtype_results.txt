@@ -1,0 +1,142 @@
+[2025-05-10 18:49:52.510901] Fold 1/5 - Epoch 1/20 - Loss: 2.0940, Train Acc: 0.4052, Val Acc: 0.4995, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 18:53:34.752141] Fold 1/5 - Epoch 2/20 - Loss: 1.5289, Train Acc: 0.5407, Val Acc: 0.5539, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 18:57:16.978513] Fold 1/5 - Epoch 3/20 - Loss: 1.3386, Train Acc: 0.5932, Val Acc: 0.5823, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 19:00:59.109812] Fold 1/5 - Epoch 4/20 - Loss: 1.2090, Train Acc: 0.6322, Val Acc: 0.6017, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 19:04:41.776479] Fold 1/5 - Epoch 5/20 - Loss: 1.1049, Train Acc: 0.6620, Val Acc: 0.6094, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 19:08:24.015367] Fold 1/5 - Epoch 6/20 - Loss: 1.0131, Train Acc: 0.6872, Val Acc: 0.6178, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 19:12:05.890479] Fold 1/5 - Epoch 7/20 - Loss: 0.9293, Train Acc: 0.7143, Val Acc: 0.6192, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 19:15:47.752017] Fold 1/5 - Epoch 8/20 - Loss: 0.8541, Train Acc: 0.7367, Val Acc: 0.6208, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 19:19:29.650410] Fold 1/5 - Epoch 9/20 - Loss: 0.7955, Train Acc: 0.7538, Val Acc: 0.6214, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 19:23:11.534767] Fold 1/5 - Epoch 10/20 - Loss: 0.7391, Train Acc: 0.7720, Val Acc: 0.6231, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 19:26:53.446595] Fold 1/5 - Epoch 11/20 - Loss: 0.6993, Train Acc: 0.7831, Val Acc: 0.6206, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 19:30:35.149931] Fold 1/5 - Epoch 12/20 - Loss: 0.6461, Train Acc: 0.7977, Val Acc: 0.6174, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 19:34:16.579396] Fold 1/5 - Epoch 13/20 - Loss: 0.5953, Train Acc: 0.8155, Val Acc: 0.6089, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 19:37:58.065384] Fold 1/5 - Epoch 14/20 - Loss: 0.5453, Train Acc: 0.8348, Val Acc: 0.6025, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 19:41:39.504983] Fold 1/5 - Epoch 15/20 - Loss: 0.5053, Train Acc: 0.8454, Val Acc: 0.6041, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 19:45:20.964397] Fold 1/5 - Epoch 16/20 - Loss: 0.4626, Train Acc: 0.8603, Val Acc: 0.6126, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 19:49:02.441687] Fold 1/5 - Epoch 17/20 - Loss: 0.4360, Train Acc: 0.8674, Val Acc: 0.6039, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 19:52:43.923591] Fold 1/5 - Epoch 18/20 - Loss: 0.4005, Train Acc: 0.8765, Val Acc: 0.5960, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 19:56:25.492770] Fold 1/5 - Epoch 19/20 - Loss: 0.3640, Train Acc: 0.8930, Val Acc: 0.5846, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 20:00:07.239893] Fold 1/5 - Epoch 20/20 - Loss: 0.3275, Train Acc: 0.9053, Val Acc: 0.5827, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 20:04:25.971726] Fold 2/5 - Epoch 1/20 - Loss: 0.6418, Train Acc: 0.8231, Val Acc: 0.8565, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 20:08:07.696409] Fold 2/5 - Epoch 2/20 - Loss: 0.4897, Train Acc: 0.8651, Val Acc: 0.8577, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 20:11:49.571123] Fold 2/5 - Epoch 3/20 - Loss: 0.3975, Train Acc: 0.8933, Val Acc: 0.8438, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 20:15:30.902091] Fold 2/5 - Epoch 4/20 - Loss: 0.3380, Train Acc: 0.9088, Val Acc: 0.8291, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 20:19:12.280412] Fold 2/5 - Epoch 5/20 - Loss: 0.3058, Train Acc: 0.9157, Val Acc: 0.8162, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 20:22:53.730973] Fold 2/5 - Epoch 6/20 - Loss: 0.2818, Train Acc: 0.9218, Val Acc: 0.8069, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 20:26:35.425790] Fold 2/5 - Epoch 7/20 - Loss: 0.2605, Train Acc: 0.9243, Val Acc: 0.7958, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 20:30:16.820673] Fold 2/5 - Epoch 8/20 - Loss: 0.2446, Train Acc: 0.9302, Val Acc: 0.7950, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 20:33:58.498576] Fold 2/5 - Epoch 9/20 - Loss: 0.2186, Train Acc: 0.9382, Val Acc: 0.7779, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 20:37:40.434221] Fold 2/5 - Epoch 10/20 - Loss: 0.2002, Train Acc: 0.9434, Val Acc: 0.7754, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 20:41:22.800888] Fold 2/5 - Epoch 11/20 - Loss: 0.1792, Train Acc: 0.9500, Val Acc: 0.7740, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 20:45:04.887887] Fold 2/5 - Epoch 12/20 - Loss: 0.1630, Train Acc: 0.9529, Val Acc: 0.7712, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 20:48:46.946433] Fold 2/5 - Epoch 13/20 - Loss: 0.1483, Train Acc: 0.9585, Val Acc: 0.7561, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 20:52:29.584851] Fold 2/5 - Epoch 14/20 - Loss: 0.1458, Train Acc: 0.9589, Val Acc: 0.7541, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 20:56:11.911057] Fold 2/5 - Epoch 15/20 - Loss: 0.1262, Train Acc: 0.9661, Val Acc: 0.7563, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 20:59:53.957936] Fold 2/5 - Epoch 16/20 - Loss: 0.1099, Train Acc: 0.9708, Val Acc: 0.7432, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 21:03:36.074504] Fold 2/5 - Epoch 17/20 - Loss: 0.0999, Train Acc: 0.9734, Val Acc: 0.7382, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 21:07:18.255524] Fold 2/5 - Epoch 18/20 - Loss: 0.0929, Train Acc: 0.9773, Val Acc: 0.7442, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 21:11:02.618658] Fold 2/5 - Epoch 19/20 - Loss: 0.0896, Train Acc: 0.9777, Val Acc: 0.7416, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 21:14:47.664358] Fold 2/5 - Epoch 20/20 - Loss: 0.0858, Train Acc: 0.9777, Val Acc: 0.7513, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 21:19:11.814111] Fold 3/5 - Epoch 1/20 - Loss: 0.2732, Train Acc: 0.9263, Val Acc: 0.9470, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 21:22:56.707010] Fold 3/5 - Epoch 2/20 - Loss: 0.1477, Train Acc: 0.9599, Val Acc: 0.9454, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 21:26:41.547888] Fold 3/5 - Epoch 3/20 - Loss: 0.1006, Train Acc: 0.9747, Val Acc: 0.9304, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 21:30:26.780854] Fold 3/5 - Epoch 4/20 - Loss: 0.0843, Train Acc: 0.9795, Val Acc: 0.9091, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 21:34:12.087390] Fold 3/5 - Epoch 5/20 - Loss: 0.0807, Train Acc: 0.9810, Val Acc: 0.9228, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 21:37:59.217809] Fold 3/5 - Epoch 6/20 - Loss: 0.0650, Train Acc: 0.9857, Val Acc: 0.9141, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 21:41:45.684690] Fold 3/5 - Epoch 7/20 - Loss: 0.0621, Train Acc: 0.9859, Val Acc: 0.9050, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 21:45:31.979843] Fold 3/5 - Epoch 8/20 - Loss: 0.0629, Train Acc: 0.9842, Val Acc: 0.9218, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 21:49:17.935298] Fold 3/5 - Epoch 9/20 - Loss: 0.0705, Train Acc: 0.9832, Val Acc: 0.8994, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 21:53:04.909683] Fold 3/5 - Epoch 10/20 - Loss: 0.0611, Train Acc: 0.9851, Val Acc: 0.8962, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 21:56:52.394878] Fold 3/5 - Epoch 11/20 - Loss: 0.0553, Train Acc: 0.9862, Val Acc: 0.8903, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 22:00:38.987007] Fold 3/5 - Epoch 12/20 - Loss: 0.0628, Train Acc: 0.9848, Val Acc: 0.8696, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 22:04:25.054797] Fold 3/5 - Epoch 13/20 - Loss: 0.0582, Train Acc: 0.9855, Val Acc: 0.8750, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 22:08:10.596032] Fold 3/5 - Epoch 14/20 - Loss: 0.0532, Train Acc: 0.9867, Val Acc: 0.8946, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 22:11:56.359926] Fold 3/5 - Epoch 15/20 - Loss: 0.0446, Train Acc: 0.9899, Val Acc: 0.8970, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 22:15:42.097791] Fold 3/5 - Epoch 16/20 - Loss: 0.0472, Train Acc: 0.9888, Val Acc: 0.8909, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 22:19:28.010946] Fold 3/5 - Epoch 17/20 - Loss: 0.0476, Train Acc: 0.9876, Val Acc: 0.8784, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 22:23:13.845093] Fold 3/5 - Epoch 18/20 - Loss: 0.0596, Train Acc: 0.9840, Val Acc: 0.8788, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 22:27:05.601966] Fold 3/5 - Epoch 19/20 - Loss: 0.0469, Train Acc: 0.9884, Val Acc: 0.8968, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 22:30:57.085161] Fold 3/5 - Epoch 20/20 - Loss: 0.0366, Train Acc: 0.9919, Val Acc: 0.8571, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 22:35:29.178738] Fold 4/5 - Epoch 1/20 - Loss: 0.1109, Train Acc: 0.9672, Val Acc: 0.9700, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 22:39:21.085315] Fold 4/5 - Epoch 2/20 - Loss: 0.0541, Train Acc: 0.9842, Val Acc: 0.9804, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 22:43:16.829201] Fold 4/5 - Epoch 3/20 - Loss: 0.0369, Train Acc: 0.9909, Val Acc: 0.9772, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 22:47:12.370364] Fold 4/5 - Epoch 4/20 - Loss: 0.0302, Train Acc: 0.9935, Val Acc: 0.9768, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 22:51:08.119378] Fold 4/5 - Epoch 5/20 - Loss: 0.0243, Train Acc: 0.9952, Val Acc: 0.9819, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 22:55:02.260824] Fold 4/5 - Epoch 6/20 - Loss: 0.0492, Train Acc: 0.9866, Val Acc: 0.9595, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 22:58:48.062889] Fold 4/5 - Epoch 7/20 - Loss: 0.0459, Train Acc: 0.9880, Val Acc: 0.9615, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 23:02:42.678594] Fold 4/5 - Epoch 8/20 - Loss: 0.0324, Train Acc: 0.9921, Val Acc: 0.9728, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 23:06:37.109469] Fold 4/5 - Epoch 9/20 - Loss: 0.0330, Train Acc: 0.9924, Val Acc: 0.9700, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 23:10:29.407364] Fold 4/5 - Epoch 10/20 - Loss: 0.0338, Train Acc: 0.9916, Val Acc: 0.9508, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 23:14:21.632529] Fold 4/5 - Epoch 11/20 - Loss: 0.0360, Train Acc: 0.9905, Val Acc: 0.9494, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 23:18:14.135276] Fold 4/5 - Epoch 12/20 - Loss: 0.0435, Train Acc: 0.9880, Val Acc: 0.9474, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 23:22:06.621338] Fold 4/5 - Epoch 13/20 - Loss: 0.0348, Train Acc: 0.9911, Val Acc: 0.9649, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 23:25:58.662655] Fold 4/5 - Epoch 14/20 - Loss: 0.0185, Train Acc: 0.9961, Val Acc: 0.9659, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 23:29:50.669321] Fold 4/5 - Epoch 15/20 - Loss: 0.0119, Train Acc: 0.9981, Val Acc: 0.9681, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 23:33:42.926938] Fold 4/5 - Epoch 16/20 - Loss: 0.0125, Train Acc: 0.9979, Val Acc: 0.9595, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 23:37:34.799007] Fold 4/5 - Epoch 17/20 - Loss: 0.0259, Train Acc: 0.9942, Val Acc: 0.9411, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 23:41:26.486020] Fold 4/5 - Epoch 18/20 - Loss: 0.0661, Train Acc: 0.9811, Val Acc: 0.9333, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 23:45:17.809268] Fold 4/5 - Epoch 19/20 - Loss: 0.0617, Train Acc: 0.9810, Val Acc: 0.9157, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 23:49:09.140100] Fold 4/5 - Epoch 20/20 - Loss: 0.0490, Train Acc: 0.9862, Val Acc: 0.9401, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 23:53:41.102211] Fold 5/5 - Epoch 1/20 - Loss: 0.0605, Train Acc: 0.9827, Val Acc: 0.9815, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-10 23:57:33.737619] Fold 5/5 - Epoch 2/20 - Loss: 0.0414, Train Acc: 0.9879, Val Acc: 0.9802, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-11 00:01:25.871010] Fold 5/5 - Epoch 3/20 - Loss: 0.0258, Train Acc: 0.9937, Val Acc: 0.9808, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-11 00:05:17.764349] Fold 5/5 - Epoch 4/20 - Loss: 0.0228, Train Acc: 0.9938, Val Acc: 0.9948, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-11 00:09:11.070908] Fold 5/5 - Epoch 5/20 - Loss: 0.0231, Train Acc: 0.9942, Val Acc: 0.9683, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-11 00:13:03.215736] Fold 5/5 - Epoch 6/20 - Loss: 0.0316, Train Acc: 0.9917, Val Acc: 0.9847, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-11 00:16:56.120854] Fold 5/5 - Epoch 7/20 - Loss: 0.0421, Train Acc: 0.9863, Val Acc: 0.9762, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-11 00:20:48.599950] Fold 5/5 - Epoch 8/20 - Loss: 0.0299, Train Acc: 0.9909, Val Acc: 0.9839, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-11 00:24:42.409697] Fold 5/5 - Epoch 9/20 - Loss: 0.0283, Train Acc: 0.9930, Val Acc: 0.9752, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-11 00:28:38.599055] Fold 5/5 - Epoch 10/20 - Loss: 0.0247, Train Acc: 0.9933, Val Acc: 0.9784, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-11 00:32:33.331662] Fold 5/5 - Epoch 11/20 - Loss: 0.0236, Train Acc: 0.9939, Val Acc: 0.9692, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-11 00:36:28.222909] Fold 5/5 - Epoch 12/20 - Loss: 0.0174, Train Acc: 0.9958, Val Acc: 0.9819, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-11 00:40:22.659996] Fold 5/5 - Epoch 13/20 - Loss: 0.0156, Train Acc: 0.9963, Val Acc: 0.9825, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-11 00:44:17.603567] Fold 5/5 - Epoch 14/20 - Loss: 0.0115, Train Acc: 0.9975, Val Acc: 0.9829, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-11 00:48:12.607022] Fold 5/5 - Epoch 15/20 - Loss: 0.0215, Train Acc: 0.9944, Val Acc: 0.9599, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-11 00:52:08.229550] Fold 5/5 - Epoch 16/20 - Loss: 0.0397, Train Acc: 0.9895, Val Acc: 0.9454, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-11 00:56:03.228363] Fold 5/5 - Epoch 17/20 - Loss: 0.0520, Train Acc: 0.9843, Val Acc: 0.9546, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-11 00:59:58.006919] Fold 5/5 - Epoch 18/20 - Loss: 0.0411, Train Acc: 0.9877, Val Acc: 0.9544, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-11 01:03:53.030132] Fold 5/5 - Epoch 19/20 - Loss: 0.0296, Train Acc: 0.9924, Val Acc: 0.9702, Task: subtype, Batch Size: 100, LR: 0.001
+[2025-05-11 01:07:48.116766] Fold 5/5 - Epoch 20/20 - Loss: 0.0142, Train Acc: 0.9966, Val Acc: 0.9742, Task: subtype, Batch Size: 100, LR: 0.001
+
+[2025-05-11 01:08:29.221228] === Final Results ===
+Encode Backbone: resnet
+WSI model: ABMIL
+Task: subtype
+Batch Size: 100, LR: 0.001, Epochs: 20, K-Folds: 5
+Average Train Accuracy: 0.9294
+Using Encode: resnet
+Average Validation Accuracy (all tasks): 0.8435
+Average Loss: 0.2413
+Task: subtype - Avg Val Acc: 0.8435
+
+=== Per-Class Validation Accuracy ===
+Class 0 - Val Acc: 0.7802 (252/323)
+Class 1 - Val Acc: 0.7754 (718/926)
+Class 2 - Val Acc: 0.7036 (425/604)
+Class 3 - Val Acc: 0.6273 (69/110)
+Class 4 - Val Acc: 0.8135 (1173/1442)
+Class 5 - Val Acc: 0.6602 (68/103)
+Class 6 - Val Acc: 0.6944 (275/396)
+Class 7 - Val Acc: 0.9181 (1884/2052)
+Class 8 - Val Acc: 0.8037 (262/326)
+Class 9 - Val Acc: 0.9236 (2007/2173)
+Class 10 - Val Acc: 0.6883 (530/770)
+Class 11 - Val Acc: 0.8626 (1356/1572)
+Class 12 - Val Acc: 0.8540 (743/870)
+Class 13 - Val Acc: 0.8024 (1287/1604)
+Class 14 - Val Acc: 0.7643 (1232/1612)
+Class 15 - Val Acc: 0.6800 (119/175)
+Class 16 - Val Acc: 0.8744 (1295/1481)
+Class 17 - Val Acc: 0.7897 (368/466)
+Class 18 - Val Acc: 0.7506 (289/385)
+Class 19 - Val Acc: 0.9258 (1085/1172)
+Class 20 - Val Acc: 0.6302 (334/530)
+Class 21 - Val Acc: 0.7095 (674/950)
+Class 22 - Val Acc: 0.7502 (898/1197)
+Class 23 - Val Acc: 0.8402 (347/413)
+Class 24 - Val Acc: 0.8980 (1039/1157)
+Class 25 - Val Acc: 0.8553 (272/318)
+Class 26 - Val Acc: 0.8352 (1145/1371)
+Class 27 - Val Acc: 0.6299 (97/154)
+Class 28 - Val Acc: 0.8067 (121/150)
