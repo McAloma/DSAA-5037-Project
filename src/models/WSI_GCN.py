@@ -12,12 +12,12 @@ class GraphClassifier:
         self.distance = distance
         self.model = SimpleGCN(in_channels, hidden_channels, num_classes)
         self.num_classes = num_classes
-        self.device = torch.device("cpu")  # 默认值
+        self.device = torch.device("cpu")  
 
     def to(self, device):
         self.device = device
         self.model = self.model.to(device)
-        return self  # 支持链式调用
+        return self  
 
     def _is_neighbor(self, c1, c2):
         return abs(c1[0] - c2[0]) + abs(c1[1] - c2[1]) == self.distance
@@ -122,7 +122,7 @@ class SimpleGCN(nn.Module):
 
 
 if __name__ == "__main__":
-    dir_path = f"a5037_course_work/data/embeddings/resnet"
+    dir_path = f"data/embeddings/resnet"
     data_path = os.listdir(dir_path)[:10]
 
     data = []
@@ -144,12 +144,12 @@ if __name__ == "__main__":
                 for d in sample]
             data.append(sample)
 
-        # 初始化模型
-    model = GraphClassifier(in_channels=2048, hidden_channels=512, num_classes=10)  # 假设做 site 分类，10类
+    
+    model = GraphClassifier(in_channels=2048, hidden_channels=512, num_classes=10) 
 
     logits = model.run_in_batches(data, batch_size=2)  # [num_graphs, num_classes]
 
     print("Logits shape:", logits.shape)
     print("Predictions:")
     preds = torch.argmax(logits, dim=1)
-    print(preds)  # 输出每个图的预测类别索引
+    print(preds)  

@@ -112,7 +112,7 @@ class GraphWalker:
         plt.axis('off')
         plt.title("Graph Walk Visualization (Node Size ∝ Visit Count)")
 
-        save_path = f"a5037_course_work/draw/walk_result.png"
+        save_path = f"draw/walk_result.png"
         plt.savefig(save_path, bbox_inches='tight', dpi=300)
         plt.close()
 
@@ -153,7 +153,7 @@ class WSIGraphClassifier(nn.Module):
 
 
 if __name__ == "__main__":
-    dir_path = f"a5037_course_work/data/embeddings/resnet"
+    dir_path = f"data/embeddings/resnet"
     data_path = [os.listdir(dir_path)[43]]
 
     data = []

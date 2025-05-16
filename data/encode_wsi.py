@@ -5,8 +5,8 @@ from typing import Tuple
 import numpy as np
 from tqdm import tqdm
 
-from a5037_course_work.src.tools.basic.pretrain_encoders import ResNet_Encoder, ViT_Encoder, DINO_Encoder
-from a5037_course_work.src.tools.basic.wsi_encoder import WSI_Image_UNI_Encoder
+from src.tools.basic.pretrain_encoders import ResNet_Encoder, ViT_Encoder, DINO_Encoder
+from src.tools.basic.wsi_encoder import WSI_Image_UNI_Encoder
 
 
 
@@ -55,76 +55,76 @@ def process_wsi_to_json(
 if __name__ == "__main__":
     data_path = f"data/TCGA_thumbnail"
 
-    # # ------ Enumerate Test ------
-    # sites = os.listdir(data_path)
-    # for site in sites:
-    #     site_path = os.path.join(data_path, site)
-    #     subtypes = os.listdir(site_path)
-    #     for subtype in subtypes:
-    #         subtype_path = os.path.join(site_path, subtype)
-    #         images = os.listdir(subtype_path)
-    #         for image in images:
-    #             image_path = os.path.join(subtype_path, image)
-    #             print(image_path)
+    # ------ Enumerate Test ------
+    sites = os.listdir(data_path)
+    for site in sites:
+        site_path = os.path.join(data_path, site)
+        subtypes = os.listdir(site_path)
+        for subtype in subtypes:
+            subtype_path = os.path.join(site_path, subtype)
+            images = os.listdir(subtype_path)
+            for image in images:
+                image_path = os.path.join(subtype_path, image)
+                print(image_path)
 
-    # encoder = ResNet_Encoder()
-    # os.makedirs("a5037_course_work/data/embeddings/resnet", exist_ok=True)
-    # sites = os.listdir(data_path)
-    # for site in sites:
-    #     site_path = os.path.join(data_path, site)
-    #     subtypes = os.listdir(site_path)
-    #     for subtype in subtypes:
-    #         subtype_path = os.path.join(site_path, subtype)
-    #         images = os.listdir(subtype_path)
-    #         for image in tqdm(images, desc=f"Processing {site}/{subtype} with ResNet", ascii=True):
-    #             image_path = os.path.join(subtype_path, image)
-    #             try:
-    #                 wsi_image = Image.open(image_path).convert('RGB')
-    #                 process_wsi_to_json(
-    #                     encoder=encoder,
-    #                     wsi_image=wsi_image,
-    #                     site=site,
-    #                     subtype=subtype,
-    #                     patch_size=(224, 224),
-    #                     step=(224, 224),
-    #                     output_path=f"a5037_course_work/data/embeddings/resnet/{image}.json"
-    #                 )
-    #             except:
-    #                 continue
+    encoder = ResNet_Encoder()
+    os.makedirs("a5037_course_work/data/embeddings/resnet", exist_ok=True)
+    sites = os.listdir(data_path)
+    for site in sites:
+        site_path = os.path.join(data_path, site)
+        subtypes = os.listdir(site_path)
+        for subtype in subtypes:
+            subtype_path = os.path.join(site_path, subtype)
+            images = os.listdir(subtype_path)
+            for image in tqdm(images, desc=f"Processing {site}/{subtype} with ResNet", ascii=True):
+                image_path = os.path.join(subtype_path, image)
+                try:
+                    wsi_image = Image.open(image_path).convert('RGB')
+                    process_wsi_to_json(
+                        encoder=encoder,
+                        wsi_image=wsi_image,
+                        site=site,
+                        subtype=subtype,
+                        patch_size=(224, 224),
+                        step=(224, 224),
+                        output_path=f"a5037_course_work/data/embeddings/resnet/{image}.json"
+                    )
+                except:
+                    continue
                 
-    #     #         break
-    #     #     break
-    #     # break
+        #         break
+        #     break
+        # break
 
-    # encoder = ViT_Encoder()
-    # os.makedirs("a5037_course_work/data/embeddings/vit", exist_ok=True)
-    # sites = os.listdir(data_path)
-    # for site in sites:
-    #     site_path = os.path.join(data_path, site)
-    #     subtypes = os.listdir(site_path)
-    #     for subtype in subtypes:
-    #         subtype_path = os.path.join(site_path, subtype)
-    #         images = os.listdir(subtype_path)
-    #         for image in tqdm(images, desc=f"Processing {site}/{subtype} with ViT", ascii=True):
-    #             image_path = os.path.join(subtype_path, image)
+    encoder = ViT_Encoder()
+    os.makedirs("a5037_course_work/data/embeddings/vit", exist_ok=True)
+    sites = os.listdir(data_path)
+    for site in sites:
+        site_path = os.path.join(data_path, site)
+        subtypes = os.listdir(site_path)
+        for subtype in subtypes:
+            subtype_path = os.path.join(site_path, subtype)
+            images = os.listdir(subtype_path)
+            for image in tqdm(images, desc=f"Processing {site}/{subtype} with ViT", ascii=True):
+                image_path = os.path.join(subtype_path, image)
 
-    #             try:
-    #                 wsi_image = Image.open(image_path).convert('RGB')
-    #                 process_wsi_to_json(
-    #                     encoder=encoder,
-    #                     wsi_image=wsi_image,
-    #                     site=site,
-    #                     subtype=subtype,
-    #                     patch_size=(224, 224),
-    #                     step=(224, 224),
-    #                     output_path=f"a5037_course_work/data/embeddings/vit/{image}.json"
-    #                 )
-    #             except:
-    #                 continue
+                try:
+                    wsi_image = Image.open(image_path).convert('RGB')
+                    process_wsi_to_json(
+                        encoder=encoder,
+                        wsi_image=wsi_image,
+                        site=site,
+                        subtype=subtype,
+                        patch_size=(224, 224),
+                        step=(224, 224),
+                        output_path=f"a5037_course_work/data/embeddings/vit/{image}.json"
+                    )
+                except:
+                    continue
 
-    #     #         break
-    #     #     break
-    #     # break
+        #         break
+        #     break
+        # break
 
     encoder = DINO_Encoder()
     os.makedirs("a5037_course_work/data/embeddings/dino", exist_ok=True)
@@ -156,32 +156,32 @@ if __name__ == "__main__":
         # break
 
 
-    # encoder = WSI_Image_UNI_Encoder()
-    # os.makedirs("a5037_course_work/data/embeddings/uni", exist_ok=True)
-    # sites = os.listdir(data_path)
-    # for site in sites:
-    #     site_path = os.path.join(data_path, site)
-    #     subtypes = os.listdir(site_path)
-    #     for subtype in subtypes:
-    #         subtype_path = os.path.join(site_path, subtype)
-    #         images = os.listdir(subtype_path)
-    #         for image in tqdm(images, desc=f"Processing {site}/{subtype} with UNI", ascii=True):
-    #             image_path = os.path.join(subtype_path, image)
+    encoder = WSI_Image_UNI_Encoder()
+    os.makedirs("a5037_course_work/data/embeddings/uni", exist_ok=True)
+    sites = os.listdir(data_path)
+    for site in sites:
+        site_path = os.path.join(data_path, site)
+        subtypes = os.listdir(site_path)
+        for subtype in subtypes:
+            subtype_path = os.path.join(site_path, subtype)
+            images = os.listdir(subtype_path)
+            for image in tqdm(images, desc=f"Processing {site}/{subtype} with UNI", ascii=True):
+                image_path = os.path.join(subtype_path, image)
 
-    #             try:
-    #                 wsi_image = Image.open(image_path).convert('RGB')
-    #                 process_wsi_to_json(
-    #                     encoder=encoder,
-    #                     wsi_image=wsi_image,
-    #                     site=site,
-    #                     subtype=subtype,
-    #                     patch_size=(224, 224),
-    #                     step=(224, 224),
-    #                     output_path=f"a5037_course_work/data/embeddings/uni/{image}.json"
-    #                 )
-    #             except:
-    #                 continue
+                try:
+                    wsi_image = Image.open(image_path).convert('RGB')
+                    process_wsi_to_json(
+                        encoder=encoder,
+                        wsi_image=wsi_image,
+                        site=site,
+                        subtype=subtype,
+                        patch_size=(224, 224),
+                        step=(224, 224),
+                        output_path=f"a5037_course_work/data/embeddings/uni/{image}.json"
+                    )
+                except:
+                    continue
 
-    #     #         break
-    #     #     break
-    #     # break
+        #         break
+        #     break
+        # break

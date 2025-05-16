@@ -16,8 +16,7 @@ class WSI_Image_UNI_Encoder():
                 transforms.Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225)),
             ])
 
-        # local_dir = "ckpts/vit_large_patch16_224.dinov2.uni_mass100k/"    # 相对路径
-        local_dir = "/hpc2ssd/JH_DATA/spooler/rsu704"                       # SSD 路径
+        local_dir = "ckpts/vit_large_patch16_224.dinov2.uni_mass100k/"    # 相对路径
 
         if param_local_dir:
             local_dir = param_local_dir
@@ -45,28 +44,6 @@ class WSI_Image_UNI_Encoder():
         embedding = self.embed_model(patch_image)
 
         return embedding.cpu().squeeze().tolist()
-
-
-    # def encode_batch(self, images, batch_size=50):
-    #     def transform_one(image):
-    #         return self.transform(image)
-
-    #     all_embeddings = []
-
-    #     for i in range(0, len(images), batch_size):
-    #         batch_images = images[i:i + batch_size]
-
-    #         with ThreadPoolExecutor() as executor:
-    #             batch_tensors = list(executor.map(transform_one, batch_images))
-
-    #         batch_tensor = torch.stack(batch_tensors, dim=0).to(self._device)
-
-    #         with torch.no_grad():
-    #             embeddings = self.embed_model(batch_tensor).cpu().squeeze().tolist()
-
-    #         all_embeddings.extend(embeddings)
-
-    #     return all_embeddings
 
 
     def encode_batch(self, images, batch_size=50, num_workers=4):

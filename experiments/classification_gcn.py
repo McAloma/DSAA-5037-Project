@@ -68,7 +68,6 @@ def train_and_evaluate_kfold(data, model, task, encode_name, embedding_dim=2048,
     all_fold_losses = []
     task_val_accs_dict = {}
 
-    # 每类验证统计初始化
     all_val_class_correct = [0 for _ in range(num_classes)]
     all_val_class_total = [0 for _ in range(num_classes)]
 
@@ -111,8 +110,8 @@ def train_and_evaluate_kfold(data, model, task, encode_name, embedding_dim=2048,
                         if edge_index.size(1) == 0:
                             continue
 
-                        out = model(embeddings, edge_index)  # [num_nodes, num_classes]
-                        graph_logit = out.mean(dim=0)             # 图级表示
+                        out = model(embeddings, edge_index)  
+                        graph_logit = out.mean(dim=0)           
                         all_logits.append(graph_logit)
 
                     logits_tensor = torch.stack(all_logits, dim=0)
@@ -131,7 +130,6 @@ def train_and_evaluate_kfold(data, model, task, encode_name, embedding_dim=2048,
                 train_acc = correct / total
                 avg_loss = total_loss / (len(train_inputs) // batch_size + 1)
 
-                # Validation
                 model.eval()
                 correct = 0
                 total = 0
@@ -182,17 +180,14 @@ def train_and_evaluate_kfold(data, model, task, encode_name, embedding_dim=2048,
                     "Val Acc": f"{val_acc:.4f}"
                 })
 
-        # 存储 fold 的信息
         all_train_accs.append(fold_train_accs)
         all_val_accs.append(fold_val_accs)
         all_fold_losses.append(fold_losses)
 
-        # 更新每个任务的 val acc 记录
         if task not in task_val_accs_dict:
             task_val_accs_dict[task] = []
         task_val_accs_dict[task].append(fold_val_accs)
 
-        # === 每 fold 结束后再统计每类 val acc ===
         model.eval()
         with torch.no_grad():
             for i in range(0, len(val_inputs), batch_size):
@@ -274,10 +269,10 @@ def load_json_data(folder):
     return data
 
 def main(args):
-    data_folder = f"a5037_course_work/data/embeddings/{args.encode_name}"
+    data_folder = f"data/embeddings/{args.encode_name}"
     data = load_json_data(data_folder)
 
-    log_path = args.log_path or f"a5037_course_work/experiments/results/{args.encode_name}_gcn_{args.task}_results.txt"
+    log_path = args.log_path or f"experiments/results/{args.encode_name}_gcn_{args.task}_results.txt"
     
     if args.task == "site":
         num_classes = 10
@@ -294,7 +289,7 @@ def main(args):
         embedding_dim = 1024
 
 
-    from a5037_course_work.src.models.WSI_GCN import SimpleGCN
+    from src.models.WSI_GCN import SimpleGCN
     model = SimpleGCN(in_channels=embedding_dim, hidden_channels=512, num_classes=num_classes) 
 
     train_and_evaluate_kfold(

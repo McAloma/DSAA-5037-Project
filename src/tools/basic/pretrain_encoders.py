@@ -23,7 +23,7 @@ class ResNet_Encoder:
 
         # 定义图像预处理过程
         self.transform = transforms.Compose([
-            transforms.Resize((224, 224)),  # torchvision 的 ResNet 输入是 224x224
+            transforms.Resize((224, 224)),  # 
             transforms.ToTensor(),
             transforms.Normalize(mean=[0.485, 0.456, 0.406],
                                  std=[0.229, 0.224, 0.225])
@@ -55,39 +55,12 @@ class ResNet_Encoder:
         
         return all_embeddings
 
-# class ResNet_Encoder:
-#     def __init__(self):
-#         model_name = "microsoft/resnet-50"
-#         cache_dir = "./5037_course_work/ckpts/resnet"
-
-#         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-#         self.model = AutoModel.from_pretrained(model_name, cache_dir=cache_dir).to(self.device)
-#         self.feature_extractor = AutoFeatureExtractor.from_pretrained(model_name, cache_dir=cache_dir)
-#         self.model.eval()
-       
-#     def encode(self, image):
-#         inputs = self.feature_extractor(images=image, return_tensors="pt").to(self.device)
-#         with torch.no_grad():
-#             outputs = self.model(**inputs)
-#             hidden = outputs.last_hidden_state 
-#             pooled = torch.nn.functional.adaptive_avg_pool2d(hidden, 1)
-#             image_embedding = pooled.view(pooled.size(0), -1).cpu().numpy() 
-#         return image_embedding
-    
-#     def encode_batch(self, images):
-#         inputs = self.feature_extractor(images=images, return_tensors="pt").to(self.device)
-#         with torch.no_grad():
-#             outputs = self.model(**inputs)
-#             hidden = outputs.last_hidden_state 
-#             pooled = torch.nn.functional.adaptive_avg_pool2d(hidden, 1)
-#             image_embedding = pooled.view(pooled.size(0), -1).cpu().numpy()
-#         return image_embedding
 
 
 class ViT_Encoder:
     def __init__(self):
         model_name="google/vit-base-patch16-224-in21k"
-        cache_dir = "./5037_course_work/ckpts/vit"
+        cache_dir = "./ckpts/vit"
 
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.model = ViTModel.from_pretrained(model_name, cache_dir=cache_dir).to(self.device)
@@ -120,7 +93,7 @@ class ViT_Encoder:
 class DINO_Encoder:
     def __init__(self):
         model_name = "facebook/dinov2-base"
-        cache_dir = "./5037_course_work/ckpts/dino"
+        cache_dir = "./ckpts/dino"
 
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.model = AutoModel.from_pretrained(model_name, cache_dir=cache_dir).to(self.device)

@@ -11,7 +11,7 @@ from datetime import datetime
 from sklearn.model_selection import StratifiedKFold
 from collections import Counter
 
-from a5037_course_work.src.models.WSI_graph_walk import WSIGraphClassifier
+from src.models.WSI_graph_walk import WSIGraphClassifier
 
 
 site_subtype = [
@@ -68,7 +68,6 @@ def train_and_evaluate_kfold(data, pooling, task, encode_name, embedding_dim=204
     all_fold_losses = []
     task_val_accs_dict = {}
 
-    # 每类验证统计初始化
     all_val_class_correct = [0 for _ in range(num_classes)]
     all_val_class_total = [0 for _ in range(num_classes)]
 
@@ -129,7 +128,6 @@ def train_and_evaluate_kfold(data, pooling, task, encode_name, embedding_dim=204
                 train_acc = correct / total
                 avg_loss = total_loss / (len(train_inputs) // batch_size + 1)
 
-                # Validation
                 classifier.eval()
                 correct = 0
                 total = 0
@@ -175,17 +173,14 @@ def train_and_evaluate_kfold(data, pooling, task, encode_name, embedding_dim=204
                     "Val Acc": f"{val_acc:.4f}"
                 })
 
-        # 存储 fold 的信息
         all_train_accs.append(fold_train_accs)
         all_val_accs.append(fold_val_accs)
         all_fold_losses.append(fold_losses)
 
-        # 更新每个任务的 val acc 记录
         if task not in task_val_accs_dict:
             task_val_accs_dict[task] = []
         task_val_accs_dict[task].append(fold_val_accs)
 
-        # === 每 fold 结束后再统计每类 val acc ===
         classifier.eval()
         with torch.no_grad():
             for i in range(0, len(val_inputs), batch_size):
@@ -215,8 +210,6 @@ def train_and_evaluate_kfold(data, pooling, task, encode_name, embedding_dim=204
                         if pred.item() == label:
                             all_val_class_correct[label] += 1
 
-    # === 所有 fold 结束后 ===
-
     avg_train_acc = sum([sum(acc) for acc in all_train_accs]) / (k_folds * epochs)
     avg_val_acc = sum([sum(acc) for acc in all_val_accs]) / (k_folds * epochs)
     avg_loss = sum([sum(loss) for loss in all_fold_losses]) / (k_folds * epochs)
@@ -232,14 +225,12 @@ def train_and_evaluate_kfold(data, pooling, task, encode_name, embedding_dim=204
         f.write(f"Average Validation Accuracy (all tasks): {avg_val_acc:.4f}\n")
         f.write(f"Average Loss: {avg_loss:.4f}\n")
 
-        # 写入任务级平均 val acc
         for task_name, val_accs_list in task_val_accs_dict.items():
             total = sum([sum(fold_accs) for fold_accs in val_accs_list])
             count = sum([len(fold_accs) for fold_accs in val_accs_list])
             avg_task_val_acc = total / count
             f.write(f"Task: {task_name} - Avg Val Acc: {avg_task_val_acc:.4f}\n")
 
-        # 写入每类 val acc
         f.write("\n=== Per-Class Validation Accuracy ===\n")
         for i in range(num_classes):
             correct = all_val_class_correct[i]
@@ -268,10 +259,10 @@ def load_json_data(folder):
     return data
 
 def main(args):
-    data_folder = f"a5037_course_work/data/embeddings/{args.encode_name}"
+    data_folder = f"data/embeddings/{args.encode_name}"
     data = load_json_data(data_folder)
 
-    log_path = args.log_path or f"a5037_course_work/experiments/results/{args.encode_name}_{args.pooling}_{args.task}_results.txt"
+    log_path = args.log_path or f"experiments/results/{args.encode_name}_{args.pooling}_{args.task}_results.txt"
 
     if args.encode_name == "resnet":
         embedding_dim = 2048
